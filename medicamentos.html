@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicamentos | Drogaria Paiva</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-home">
+
+  <!-- Header -->
+  <div class="headerStickyRow">
+    <div class="headerRow">
+      <div class="headerRowBackground">
+        <section class="container headerRowContentContainer">
+          <div class="headerRowContainer">
+            <a href="index.html" class="logoLink">
+              <div class="logoContainer">
+                <img src="img/logomarca.png" alt="Drogaria Paiva" height="100">
+              </div>
+            </a>
+
+            <!-- Busca -->
+            <div class="containerBusca">
+              <div class="containerNovaBusca">
+                <div class="containerInputNovaBusca">
+                  <svg class="iconNovaBusca" stroke="currentColor" fill="none" stroke-width="2"
+                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                  <input class="inputNovaBusca" placeholder="O que você procura?" value="">
+                </div>
+              </div>
+            </div>
+
+            <!-- Login / Cesta -->
+            <div class="loginContainer">
+              <div class="relative">
+                <div class="buttonLink">
+                  <button class="vtex-button" type="button">
+                    <div class="vtex-button__label">
+                      <span class="flex items-center">
+                        <i class="bi bi-person mr3 profile-icon"></i>
+                        <div class="login-text-container">
+                          <span class="welcome-text">Olá, bem vindo!</span>
+                          <a href="login.html" class="login-link">Entrar</a>
+                        </div>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="minicartWrapperContainer">
+                <div class="minicartContainer">
+                  <div class="minicartIconContainer">
+                    <i class="bi bi-basket2 cart-icon"></i>
+                    <span class="minicart-label">Minha cesta</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="mainNavigation">
+      <div class="container">
+        <ul class="navMenu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="medicamentos.html" class="active">Medicamentos</a></li>
+          <li><a href="quemsomos.html">Quem Somos</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteúdo principal -->
+ <main class="container">
+        <section class="intro">
+            <h2>Medicamentos</h2>
+        </section>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+                    <img src="img/paracetamol.png" alt="Produto 1" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Paracetamol 750mg 20 comprimidos</h3>
+                        <p class="produto-preco">R$ 12,90</p>
+                    </div>
+                </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+                    <img src="img/vitaminaC.png" alt="Produto 2" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Vitamina C 10 comprimidos</h3>
+                        <p class="produto-preco">R$ 10,99</p>
+                    </div>
+                </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+                        <div class="produto-card">
+                    <img src="img/neosaldina.png" alt="Produto 3" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Neosaldina 300mg + 30mg + 30mg 30 Drágeas</h3>
+                        <p class="produto-preco">R$ 41,99</p>
+                    </div>
+                </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4">
+                        <div class="produto-card">
+                    <img src="img/dipirona.png" alt="Produto 3" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Dipirona Monoidratada 500mg/ml 20ml</h3>
+                        <p class="produto-preco">R$ 5,99</p>
+                    </div>
+                </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="img/buscopan.png" alt="Produto 3" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Buscopan 10mg 20 comprimidos</h3>
+            <p class="produto-preco">R$ 15,99</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="img/dorflex.jpg" alt="Produto 3" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Dorflex UNO Dipirona 1g 20 comprimidos</h3>
+            <p class="produto-preco">R$ 18,99</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="img/benegrip.png" alt="Produto 3" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Benegrip 20 Comprimidos</h3>
+            <p class="produto-preco">R$ 42,54</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="img/doril.jpg" alt="Produto 3" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Doril Enxaqueca 250mg + 250mg + 65mg</h3>
+            <p class="produto-preco">R$ 35,96</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="img/cimegripe.png" alt="Produto 3" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Cimegripe 400mg + 4mg + 4mg</h3>
+            <p class="produto-preco">R$ 30,56</p>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3 class="footer-title">Nossas Lojas</h3>
+          <ul class="footer-links">
+            <li><i class="bi bi-geo-alt"></i> Rua Maxaranguape, 621 – Térreo<br><i class="bi bi-telephone"></i> (84) 3212-2222</li>
+            <li><i class="bi bi-geo-alt"></i> Av. Prudente de Morais, 6320 – Candelária<br><i class="bi bi-telephone"></i> (84) 3206-2222</li>
+            <li><i class="bi bi-geo-alt"></i> Av. Dr. João Medeiros Filho, 1300 – Potengi<br><i class="bi bi-telephone"></i> (84) 3214-2222</li>
+            <li><i class="bi bi-geo-alt"></i> Av. Afonso Pena, 909 – Tirol<br><i class="bi bi-telephone"></i> (84) 3615-2222</li>
+            <li><i class="bi bi-geo-alt"></i> Av. Jaguarari, 2234 – Lagoa Nova<br><i class="bi bi-telephone"></i> (84) 3215-9969</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Convênios</h3>
+          <div class="convenios-logos">
+            <div class="convenio-logo">AFURN</div>
+            <div class="convenio-logo">ASSEC</div>
+            <div class="convenio-logo">FANCARD</div>
+            <div class="convenio-logo">POLICARD</div>
+            <div class="convenio-logo">REDEMED</div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Siga-nos</h3>
+          <div class="social-icons">
+            <a href="https://pt-br.facebook.com/drogariapaiva" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/drogariapaiva/" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com/drogariapaiva" class="social-icon"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCv4DsvSWsayUgptTsTqJNdg" class="social-icon"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Drogaria Paiva</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
