@@ -251,6 +251,46 @@ body {
     gap: 2rem;
 }
 
+/* Overrides específicos para o header: removem linhas/bordas herdadas e fixam cor/tamanho dos ícones */
+.headerRow .login-link,
+.headerStickyRow .login-link {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    border-top: none !important;
+    color: #0097b2 !important;
+    font-weight: 700 !important;
+}
+
+.headerRow .login-text-container,
+.headerStickyRow .login-text-container {
+    align-items: flex-start;
+    text-align: left;
+    line-height: 1.05;
+}
+
+.headerRow .vtex-button__label,
+.headerStickyRow .vtex-button__label {
+    gap: 0.5rem;
+    padding: 6px 8px;
+    justify-content: flex-start;
+}
+
+.headerRow .profile-icon,
+.headerStickyRow .profile-icon,
+.headerRow .cart-icon,
+.headerStickyRow .cart-icon {
+    color: var(--cinza-texto) !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.headerRow .minicart-label,
+.headerStickyRow .minicart-label {
+    color: var(--cinza-texto) !important;
+}
+
 /* logo */
 .logoLink {
     text-decoration: none;
@@ -264,7 +304,7 @@ body {
 }
 
 .logoContainer img {
-    height: 170px;
+    max-height: 120px;
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
@@ -334,9 +374,9 @@ body {
 }
 
 .vtex-button {
-    background: transparent;
-    border: 1px solid transparent;
-    color: var(--azul);
+    background: transparent !important;
+    border: none !important;
+    color: inherit;
     font-weight: 500;
     border-radius: 8px;
     min-height: 44px;
@@ -346,28 +386,52 @@ body {
 }
 
 .vtex-button:hover {
-    background-color: rgba(0,151,178,0.05);
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 .vtex-button__label {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 8px 16px;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 6px 8px;
+}
+
+.vtex-button__label::before,
+.vtex-button__label::after {
+    display: none !important;
+    content: none !important;
+}
+
+.vtex-button i,
+.vtex-button .bi {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
 }
 
 .profile-icon {
-    width: 20px;
-    height: 20px;
-    color: var(--cinza-texto);
+    font-size: 20px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--cinza-texto) !important;
     margin-right: 8px;
 }
 
 .login-text-container {
     display: flex;
     flex-direction: column;
-    line-height: 1.2;
+    line-height: 1.1;
     align-items: flex-start;
+    text-align: left;
+}
+
+.login-text-container::before,
+.login-text-container::after {
+    display: none !important;
+    content: none !important;
 }
 
 .welcome-text {
@@ -378,14 +442,15 @@ body {
 
 .login-link {
     font-size: 13px;
-    color: var(--azul);
+    color: #111;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: 700;
+    transition: color 0.2s;
 }
 
 .login-link:hover {
-    color: #007a94;
+    color: #111;
+    text-decoration: none;
 }
 
 /* minicart */
@@ -404,13 +469,13 @@ body {
     transition: background-color 0.3s;
 }
 
-.minicartContainer:hover {
-    background-color: rgba(0,151,178,0.05);
-}
 
 .cart-icon {
     font-size: 20px;
-    color: var(--cinza-texto);
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--cinza-texto) !important;
 }
 
 .minicart-label {
@@ -487,30 +552,38 @@ body {
 }
 
 .vtex-button {
-    border: 1px solid transparent;
+    border: none !important;
     font-weight: 500;
     position: relative;
     padding: 0;
     line-height: 1;
     border-radius: 6px;
     min-height: 44px;
-    background: transparent;
+    background: transparent !important;
     border-color: transparent;
-    color: var(--azul);
+    color: inherit;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .vtex-button:hover {
-    background-color: rgba(0, 151, 178, 0.05);
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 .vtex-button__label {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
-    padding: 8px 16px;
+    gap: 0.5rem;
+    padding: 6px 8px;
+}
+
+.vtex-button:focus,
+.vtex-button:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .flex.items-center {
@@ -523,8 +596,10 @@ body {
 }
 
 .profile-icon {
-    width: 18px;
-    height: 18px;
+    font-size: 20px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
     color: var(--cinza-texto);
 }
 
@@ -562,8 +637,9 @@ body {
 
 .minicartContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    gap: 0.5rem;
     cursor: pointer;
     padding: 0.5rem 0.8rem;
     border-radius: 6px;
@@ -571,7 +647,8 @@ body {
 }
 
 .minicartContainer:hover {
-    background-color: rgba(0, 151, 178, 0.05);
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 .minicartIconContainer {
@@ -582,11 +659,6 @@ body {
     gap: 0.5rem;
 }
 
-.cart-icon {
-    width: 20px;
-    height: 20px;
-    color: var(--cinza-texto);
-}
 
 .minicart-label {
     font-size: 13px;
@@ -651,7 +723,7 @@ body {
     }
     
     .logoContainer img {
-        height: 40px;
+        height: 80px;
     }
     
     .containerBusca {
@@ -695,7 +767,7 @@ body {
     }
     
     .logoContainer img {
-        height: 35px;
+        height: 65px;
     }
     
     .inputNovaBusca {
@@ -719,8 +791,11 @@ body {
     }
     
     .cart-icon {
-        width: 18px;
-        height: 18px;
+        font-size: 18px;
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+        color: var(--cinza-texto);
     }
 }
 
