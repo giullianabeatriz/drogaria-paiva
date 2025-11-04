@@ -19,22 +19,22 @@
         <form method="post">
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name" placeholder="Digite seu nome" required>
+                <input type="text" class="form-control" id="name" placeholder="Digite seu nome">
             </div>
             
             <div class="mb-3">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
             </div>
             
             <div class="mb-3">
                 <label for="userphone" class="form-label">Telefone</label>
-                <input type="text" class="form-control" id="userphone" placeholder="Digite seu telefone" required>
+                <input type="text" class="form-control" id="userphone" placeholder="Digite seu telefone">
             </div>
             
             <div class="mb-3">
                 <label for="password" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="password" placeholder="Crie uma senha" required onkeyup="checkPasswordStrength(this.value)">
+                <input type="password" class="form-control" id="password" placeholder="Crie uma senha">
                 <div class="password-strength">
                     <div class="password-strength-bar" id="passwordStrengthBar"></div>
                 </div>
@@ -45,12 +45,12 @@
             
             <div class="mb-3">
                 <label for="confirmPassword" class="form-label">Confirmar Senha</label>
-                <input type="password" class="form-control" id="confirmPassword" placeholder="Digite a senha novamente" required>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Digite a senha novamente">
                 <div class="form-text" id="passwordMatch"></div>
             </div>
             
             <div class="mx-auto w-75 mb-4">
-                <button type="submit" class="btn btn-primary w-100" id="submitBtn">Cadastrar</button>
+                <a class="btn btn-primary w-100" href="login.html" id="submitBtn">Cadastrar</a>
             </div>
         </form>
         
