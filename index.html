@@ -11,62 +11,65 @@
 </head>
 <body class="body-home">
     <!-- Header Sticky -->
-    <div class="headerStickyRow">
-        <div class="headerRow">
-            <div class="headerRowBackground">
-                <section class="container headerRowContentContainer">
-                    <div class="headerRowContainer">
-                        <!-- Logo -->
-                        <a href="index.html" class="logoLink">
-                            <div class="logoContainer">
-                                <img src="img/logomarca.png" alt="Drogaria Paiva"  height="100">
-                            </div>
-                        </a>
-                        
-                        <!-- Barra de Busca -->
-                        <div class="containerBusca">
-                            <div class="containerNovaBusca">
-                                <div class="containerInputNovaBusca">
-                                    <svg class="iconNovaBusca" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="11" cy="11" r="8"></circle>
-                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                    </svg>
-                                    <input class="inputNovaBusca" placeholder="O que você procura?" value="">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="loginContainer">
-                            <div class="relative">
-                                <div class="buttonLink">
-                                    <button class="vtex-button" type="button">
-                                        <div class="vtex-button__label">
-                                            <span class="flex items-center">
-                                                <i class="bi bi-person mr3 profile-icon"></i>
-                                                <div class="login-text-container">
-                                                    <span class="welcome-text">Olá, bem vindo!</span>
-                                                    <a href="login.html" class="login-link">Entrar</a>
-                                                </div>
-                                            </span>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                            
-                            <!-- Minicart -->
-                            <div class="minicartWrapperContainer">
-                                <div class="minicartContainer">
-                                    <div class="minicartIconContainer">
-                                        <i class="bi bi-basket2 cart-icon"></i>
-                                        <span class="minicart-label">Minha cesta</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <header class="headerStickyRow">
+      <div class="headerRow">
+        <div class="headerRowBackground">
+          <section class="container headerRowContentContainer">
+            <div class="headerRowContainer d-flex align-items-center justify-content-between py-3">
+  
+              <!-- Logo -->
+              <a href="index.html" class="logoLink d-flex align-items-center">
+                <div class="logoContainer">
+                  <img src="img/logomarca.png" alt="Drogaria Paiva" class="logo-img">
+                </div>
+              </a>
+  
+              <!-- Barra de Busca -->
+              <div class="containerBusca flex-grow-1 mx-4">
+                <div class="containerNovaBusca">
+                  <div class="containerInputNovaBusca d-flex align-items-center">
+                    <svg class="iconNovaBusca me-2" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                      stroke-linecap="round" stroke-linejoin="round" height="1.5em" width="1.5em"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input class="inputNovaBusca form-control" placeholder="O que você procura?" value="">
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Login e Carrinho -->
+              <div class="loginContainer d-flex align-items-center gap-4">
+  
+                <!-- Login -->
+                <div class="buttonLink">
+                  <button class="vtex-button btn btn-outline-primary" type="button">
+                    <div class="vtex-button__label d-flex align-items-center">
+                      <i class="bi bi-person me-2 profile-icon"></i>
+                      <div class="login-text-container text-start">
+                        <span class="welcome-text d-block">Olá, bem vindo!</span>
+                        <a href="login.html" class="login-link text-decoration-none">Entrar</a>
+                      </div>
                     </div>
-                </section>
+                  </button>
+                </div>
+  
+                <!-- Minicart -->
+                <div class="minicartWrapperContainer">
+                  <div class="minicartContainer d-flex align-items-center">
+                    <i class="bi bi-basket2 cart-icon fs-4 me-2"></i>
+                    <span class="minicart-label">Minha cesta</span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </section>
         </div>
+      </div>
+    </header>
+  </body>
+  
 
         <!-- Menu de Navegação -->
         <div class="mainNavigation">

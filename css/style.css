@@ -229,7 +229,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
-    background: white;
+    background: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -242,31 +242,12 @@ body {
     color: var(--cinza-texto);
 }
 
-/* container principal */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-@media (min-width: 768px) {
-    .container {
-        padding: 0 2rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        padding: 0 4rem;
-    }
-}
-
 .headerRowContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0.8rem 0;
+    padding: 1rem 0;
     gap: 2rem;
 }
 
@@ -277,15 +258,20 @@ body {
 }
 
 .logoContainer {
-    padding: 0.5rem 0;
     display: flex;
     align-items: center;
+    padding: 0.5rem 0;
 }
 
 .logoContainer img {
-    height: 50px;
+    height: 170px;
     width: auto;
     object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logoContainer img:hover {
+    transform: scale(1.05);
 }
 
 /* barra de busca */
@@ -293,17 +279,17 @@ body {
     flex: 1;
     max-width: 600px;
     min-width: 200px;
+    margin: 0 1rem;
 }
 
 .containerNovaBusca {
-    position: relative;
     width: 100%;
 }
 
 .containerInputNovaBusca {
-    position: relative;
     display: flex;
     align-items: center;
+    position: relative;
     width: 100%;
 }
 
@@ -320,7 +306,7 @@ body {
     width: 100%;
     padding: 12px 20px 12px 45px;
     border: 1px solid #e3e4e6;
-    border-radius: 8px;
+    border-radius: 50px;
     font-size: 14px;
     background-color: #f9f9f9;
     outline: none;
@@ -330,13 +316,162 @@ body {
 
 .inputNovaBusca:focus {
     border-color: var(--azul);
-    background-color: white;
-    box-shadow: 0 0 0 2px rgba(0, 151, 178, 0.1);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0,151,178,0.1);
 }
 
 .inputNovaBusca::placeholder {
     color: var(--cinza-texto);
     font-size: 13px;
+}
+
+/* login e minicart */
+.loginContainer {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-shrink: 0;
+}
+
+.vtex-button {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--azul);
+    font-weight: 500;
+    border-radius: 8px;
+    min-height: 44px;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+}
+
+.vtex-button:hover {
+    background-color: rgba(0,151,178,0.05);
+}
+
+.vtex-button__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+}
+
+.profile-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--cinza-texto);
+    margin-right: 8px;
+}
+
+.login-text-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    align-items: flex-start;
+}
+
+.welcome-text {
+    font-size: 11px;
+    color: var(--cinza-texto);
+    font-weight: 400;
+}
+
+.login-link {
+    font-size: 13px;
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.login-link:hover {
+    color: #007a94;
+}
+
+/* minicart */
+.minicartWrapperContainer {
+    display: flex;
+    align-items: center;
+}
+
+.minicartContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.minicartContainer:hover {
+    background-color: rgba(0,151,178,0.05);
+}
+
+.cart-icon {
+    font-size: 20px;
+    color: var(--cinza-texto);
+}
+
+.minicart-label {
+    font-size: 13px;
+    color: var(--cinza-texto);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* responsividade cabeçalho */
+@media (max-width: 1024px) {
+    .headerRowContainer {
+        gap: 1.5rem;
+    }
+    .containerBusca {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerRowContainer {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .logoContainer img {
+        height: 80px;
+    }
+
+    .containerBusca {
+        order: 3;
+        width: 100%;
+        margin: 0.8rem 0;
+    }
+
+    .loginContainer {
+        order: 2;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .minicart-label {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logoContainer img {
+        height: 65px;
+    }
+
+    .inputNovaBusca {
+        font-size: 13px;
+        padding: 10px 15px 10px 40px;
+    }
+
+    .iconNovaBusca {
+        left: 12px;
+        width: 16px;
+        height: 16px;
+    }
 }
 
 /* login header */
