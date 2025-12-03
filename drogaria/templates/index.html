@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Página Inicial | Drogaria Paiva{% endblock %}
+
+{% block content %}
+  <!-- Banner -->
+  <img src="{% static 'img/banner.png' %}" alt="Banner Drogaria Paiva" style="width: 100%;">
+
+  <!-- Seção de Produtos -->
+  <section class="produtos-section py-5">
+    <div class="container">
+      <h2 class="produtos-titulo">Produtos em Destaque</h2>
+      <div class="produtos-container d-flex gap-4 flex-wrap">
+        <!-- Card 1 -->
+        <div class="produto-card">
+          <img src="{% static 'img/paracetamol.png' %}" alt="Produto 1" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Paracetamol 750mg 20 comprimidos</h3>
+            <p class="produto-preco">R$ 12,90</p>
+          </div>
+        </div>
+                
+        <!-- Card 2 -->
+        <div class="produto-card">
+          <img src="{% static 'img/vitaminaC.png' %}" alt="Produto 2" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Vitamina C 10 comprimidos</h3>
+            <p class="produto-preco">R$ 10,99</p>
+          </div>
+        </div>
+                
+        <!-- Card 3 -->
+        <div class="produto-card">
+          <img src="{% static 'img/neosaldina.png' %}" alt="Produto 3" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Neosaldina 300mg + 30mg + 30mg 30 Drágeas</h3>
+            <p class="produto-preco">R$ 41,99</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

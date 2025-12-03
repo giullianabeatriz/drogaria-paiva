@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Nossos Serviços - Drogaria Paiva{% endblock %}
+
+{% block content %}
+    <div class="container py-5">
+        <section class="intro mb-3">
+            <h2>Nossos Serviços</h2>
+            <p>Oferecemos diversos serviços farmacêuticos e de saúde para atender suas necessidades.</p>
+        </section>
+
+        <section class="services">
+            <div class="service-category">
+                <h3>Farmacêuticos</h3>
+                <ul>
+                    <li>Assistência farmacêutica</li>
+                    <li>Fornecimento de produtos especiais (medicação rara)</li>
+                    <li>Entrega em domicílio</li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h3>Procedimentos e cuidados </h3>
+                <ul>
+                    <li>Aplicação de injetáveis</li>
+                    <li>Perfuração do lóbulo auricular (orelha) para colocação de brincos</li>
+                    <li>Verificação de pressão arterial</li>
+                    <li>Teste glicêmico</li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h3>Atendimento e conveniência</h3>
+                <ul>
+                    <li>Loja com atendimento estendido (até a meia-noite)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="partnerships mt-4">
+            <h2>Parcerias e Programas</h2>
+            <p>A Drogaria Paiva possui parcerias com grandes laboratórios (fabricantes de produtos) o que possibilita a garantia de milhares de itens diversos. </p>
+            <p>É também credenciada no programa "Aqui tem Farmácia Popular", do Governo Federal, e disponibiliza:</p>
+            <ul>
+                <li>Medicamentos gratuitos para hipertensão, diabetes e asma.</li>
+                <li>Até 90% de subsídio pago pelo governo nos medicamentos para:
+                    <ul>
+                        <li>Colesterol</li>
+                        <li>Osteoporose</li>
+                        <li>Rinite</li>
+                        <li>Doença de Parkinson</li>
+                        <li>Glaucoma</li>
+                        <li>Anticoncepcional</li>
+                        <li>Fraldas geriátricas</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+{% endblock %}

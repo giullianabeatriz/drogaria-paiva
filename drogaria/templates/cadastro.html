@@ -1,0 +1,59 @@
+{% extends 'baseauth.html' %}
+{% load static %}
+{% block title %}Cadastro | Drogaria Paiva{% endblock %}
+
+{% block content %}
+<div class="body-form py-5">
+    <div class="form-container">
+        <div class="register-container mx-auto">
+            <div class="logo text-center mb-3">
+                <h2>Cadastro</h2>
+                <p>Crie sua conta para começar</p>
+            </div>
+
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="userphone" class="form-label">Telefone</label>
+                    <input type="text" class="form-control" id="userphone" name="userphone" placeholder="Digite seu telefone">
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Crie uma senha" required>
+                    <div class="password-strength">
+                        <div class="password-strength-bar" id="passwordStrengthBar"></div>
+                    </div>
+                    <div class="form-text" id="passwordHelp">
+                        Sua senha deve ter pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas e números.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirmar Senha</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Digite a senha novamente" required>
+                    <div class="form-text" id="passwordMatch"></div>
+                </div>
+
+                <div class="mx-auto w-75 mb-4">
+                    <button type="submit" class="btn btn-primary w-100" id="submitBtn">Cadastrar</button>
+                </div>
+            </form>
+
+            <div class="login-link links text-center">
+                <a href="/login/" class="text-decoration-none">Já tem conta? Fazer login</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

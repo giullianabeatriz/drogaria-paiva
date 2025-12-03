@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Medicamentos | Drogaria Paiva{% endblock %}
+
+{% block content %}
+  <div class="container py-5">
+    <section class="intro mb-4">
+        <h2>Medicamentos</h2>
+    </section>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="{% static 'img/paracetamol.png' %}" alt="Produto 1" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Paracetamol 750mg 20 comprimidos</h3>
+            <p class="produto-preco">R$ 12,90</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="{% static 'img/vitaminaC.png' %}" alt="Produto 2" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Vitamina C 10 comprimidos</h3>
+            <p class="produto-preco">R$ 10,99</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="{% static 'img/neosaldina.png' %}" alt="Produto 3" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Neosaldina 300mg + 30mg + 30mg 30 Drágeas</h3>
+            <p class="produto-preco">R$ 41,99</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="{% static 'img/dipirona.png' %}" alt="Dipirona" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Dipirona Monoidratada 500mg/ml 20ml</h3>
+            <p class="produto-preco">R$ 5,99</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="{% static 'img/buscopan.png' %}" alt="Buscopan" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Buscopan 10mg 20 comprimidos</h3>
+            <p class="produto-preco">R$ 15,99</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="{% static 'img/dorflex.jpg' %}" alt="Dorflex" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Dorflex UNO Dipirona 1g 20 comprimidos</h3>
+            <p class="produto-preco">R$ 18,99</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="{% static 'img/benegrip.png' %}" alt="Benegrip" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Benegrip 20 Comprimidos</h3>
+            <p class="produto-preco">R$ 42,54</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="{% static 'img/doril.jpg' %}" alt="Doril" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Doril Enxaqueca 250mg + 250mg + 65mg</h3>
+            <p class="produto-preco">R$ 35,96</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="col-md-4">
+        <div class="produto-card">
+          <img src="{% static 'img/cimegripe.png' %}" alt="Cimegripe" class="produto-imagem">
+          <div class="produto-info">
+            <h3 class="produto-nome">Cimegripe 400mg + 4mg + 4mg</h3>
+            <p class="produto-preco">R$ 30,56</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'baseauth.html' %}
+{% load static %}
+{% block title %}Login | Drogaria Paiva{% endblock %}
+
+{% block content %}
+<div class="body-form py-5">
+    <div class="form-container">
+        <div class="login-container mx-auto">
+            <div class="logo text-center mb-3">
+                <h2>Login</h2>
+                <p>Acesse sua conta para continuar</p>
+            </div>
+
+            <form id="loginForm" method="post" action="">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha" required>
+                </div>
+
+                <div class="forgot-password mb-3">
+                    <a href="/esqueceuasenha/" class="text-decoration-none">Esqueceu a senha?</a>
+                </div>
+
+                <div class="mx-auto w-75 mb-4">
+                    <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                </div>
+            </form>
+
+            <div class="register-link links text-center">
+                <a href="/cadastro/" class="text-decoration-none">Não possui uma conta ainda? Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
